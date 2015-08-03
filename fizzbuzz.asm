@@ -36,7 +36,7 @@ counter:
   push rcx ; save counter in case it will
            ; be modified in the subsequent functions
 
-  ; is deviseable by 3 or 5 (or 3*5)
+  ; is divisible by 3 or 5 (or 3*5)
   xor rdx, rdx ; clear remainder
   mov rax, rcx ; divide current counter
   mov rbx, 15  ; by 3 or 5
@@ -45,7 +45,7 @@ counter:
   jz  print_fizzbuzz
 
        
-  ; is deviseable by 5
+  ; is divisible by 5
   xor rdx, rdx ; clear remainder
   mov rax, rcx ; divide current counter
   mov rbx, 5   ; by 5
@@ -53,6 +53,7 @@ counter:
   cmp rdx, 0   ; true
   jz  print_buzz
 
+  ; is divisible by 3
   xor rdx, rdx ; clear remainder
   mov rax, rcx ; divide current counter
   mov rbx, 3   ; by 3
