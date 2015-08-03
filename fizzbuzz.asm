@@ -43,7 +43,6 @@ counter:
   div rbx
   cmp rdx, 0   ; true
   jz  print_fizzbuzz
-
        
   ; is divisible by 5
   xor rdx, rdx ; clear remainder
